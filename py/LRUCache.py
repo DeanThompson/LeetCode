@@ -3,17 +3,17 @@
 
 """
 https://oj.leetcode.com/problems/lru-cache/
-"""
 
+inspired by the implementation from jinja2
+"""
 
 class LRUCache:
 
     # @param capacity, an integer
     def __init__(self, capacity):
+        self._cap = capacity
         self._cache = {}
         self._queue = []
-        self._cap = capacity
-        self._length = 0
 
     # @return an integer
     def get(self, key):
@@ -35,12 +35,11 @@ class LRUCache:
         if key in self._cache:
             self._queue.remove(key)
         else:
-            if self._length == self._cap:
+            if len(self._cache) == self._cap:
                 # remove the Least Recently Used item
                 rk = self._queue[0]
                 del self._queue[0]
                 del self._cache[rk]
-            self._length += 1
 
         self._queue.append(key)
         self._cache[key] = value
