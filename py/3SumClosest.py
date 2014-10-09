@@ -22,9 +22,11 @@ class Solution:
                 total = v + num[j] + num[k]
                 diff = abs(total-target)
                 if diff < min_diff:
+                    if diff == 0:
+                        return total
                     min_diff = diff
                     result = total
-                if total <= target:
+                if total < target:
                     j += 1
                 else:
                     k -= 1
