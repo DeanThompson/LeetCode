@@ -7,6 +7,7 @@ https://oj.leetcode.com/problems/lru-cache/
 inspired by the implementation from jinja2
 """
 
+# TODO: `list.remove` is too slow
 class LRUCache:
 
     # @param capacity, an integer
