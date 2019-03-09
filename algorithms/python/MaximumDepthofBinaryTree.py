@@ -29,13 +29,12 @@ class Solution:
 if __name__ == '__main__':
     s = Solution()
     root = TreeNode(1)
-    print s.maxDepth(root)
+    print(s.maxDepth(root))
 
     root.left = TreeNode(2)
     root.right = TreeNode(3)
-    print s.maxDepth(root)
-
+    print(s.maxDepth(root))
 
     root.left.left = TreeNode(4)
     root.left.left.right = TreeNode(4)
-    print s.maxDepth(root)
+    print(s.maxDepth(root))

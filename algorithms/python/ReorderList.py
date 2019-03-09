@@ -28,7 +28,7 @@ class Solution:
             slow = slow.next
             fast = fast.next.next
 
-        right_head = slow.next     # slow is currently middle
+        right_head = slow.next  # slow is currently middle
         slow.next = None
         right_head = self._reverse(right_head)  # reverse right part
 
@@ -40,7 +40,6 @@ class Solution:
             cur.next = right_head
             cur = right_head.next
             right_head = tmp
-
 
     def _reverse(self, head):
         if head is None or head.next is None:
@@ -59,9 +58,9 @@ class Solution:
 
 def print_list(head):
     while head:
-        print head.val,
+        print(head.val, )
         head = head.next
-    print "\n"
+    print("\n")
 
 
 if __name__ == '__main__':
@@ -70,11 +69,10 @@ if __name__ == '__main__':
     head.next = ListNode(2)
     head.next.next = ListNode(3)
     head.next.next.next = ListNode(4)
-    #head.next.next.next.next = ListNode(5)
+    # head.next.next.next.next = ListNode(5)
 
     print_list(head)
 
     s.reorderList(head)
 
     print_list(head)
-

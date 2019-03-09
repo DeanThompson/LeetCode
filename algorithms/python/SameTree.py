@@ -5,6 +5,7 @@
 https://oj.leetcode.com/problems/same-tree/
 """
 
+
 # Definition for a  binary tree node
 class TreeNode:
     def __init__(self, x):
@@ -17,7 +18,7 @@ class Solution:
     # @param p, a tree node
     # @param q, a tree node
     # @return a boolean
-    def isSameTree(self, p, q):     
+    def isSameTree(self, p, q):
         if p is None or q is None:
             return p == q
         return p.val == q.val and self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
@@ -33,5 +34,4 @@ if __name__ == '__main__':
     qroot.right = TreeNode(3)
 
     s = Solution()
-    print s.isSameTree(proot, qroot)
-
+    print(s.isSameTree(proot, qroot))

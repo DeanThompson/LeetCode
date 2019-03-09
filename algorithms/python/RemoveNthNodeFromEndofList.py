@@ -28,7 +28,7 @@ class Solution:
         while n > 0:
             fast = fast.next
             n -= 1
-     
+
         # move fast and slow in the same pace
         # slow will be (n-1)th node from the end while fast reach the end
         while fast and fast.next:
@@ -62,10 +62,10 @@ class Solution:
 
 def _print_list(head):
     while head:
-        print head.val, 
+        print(head.val, )
         head = head.next
 
-    print "\n"
+    print("\n")
 
 
 if __name__ == '__main__':
@@ -78,8 +78,7 @@ if __name__ == '__main__':
     _print_list(head)
 
     s = Solution()
-    #head = s.removeNthFromEnd(head, 7)
+    # head = s.removeNthFromEnd(head, 7)
     head = s.removeNthFromEnd2(head, 8)
 
     _print_list(head)
-

@@ -21,12 +21,12 @@ class Solution:
         append = words.append
         i = len(s)
         while i > 0:
-            while i > 0 and s[i-1] in spaces:
+            while i > 0 and s[i - 1] in spaces:
                 i -= 1
             if i == 0:
                 break
             right = i
-            while i > 0 and s[i-1] not in spaces:
+            while i > 0 and s[i - 1] not in spaces:
                 i -= 1
             left = i
             append(s[left:right])
@@ -34,11 +34,9 @@ class Solution:
         return " ".join(words)
 
 
-
-
 if __name__ == '__main__':
     ss = Solution()
     s = "the \tsky is         blue"
-    print ss.reverseWords(s)
+    print(ss.reverseWords(s))
 
-    print ss.reverseWords2(s)
+    print(ss.reverseWords2(s))

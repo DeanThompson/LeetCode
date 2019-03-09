@@ -5,6 +5,7 @@
 https://oj.leetcode.com/problems/binary-tree-preorder-traversal/
 """
 
+
 # Definition for a  binary tree node
 class TreeNode:
     def __init__(self, x):
@@ -35,5 +36,4 @@ if __name__ == '__main__':
     root = TreeNode(1)
     root.right = TreeNode(2)
     root.right.left = TreeNode(3)
-    print s.preorderTraversal(root)
-
+    print(s.preorderTraversal(root))

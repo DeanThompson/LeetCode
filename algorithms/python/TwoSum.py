@@ -12,12 +12,12 @@ class Solution:
         d = {}
         for idx, val in enumerate(num):
             v = d.get(val, [])
-            v.append(idx+1)
+            v.append(idx + 1)
             d[val] = v
 
         index1, index2 = 1, 2
 
-        for val, idx in d.iteritems():
+        for val, idx in d.items():
             idx2 = d.get(target - val)
             if idx2 is None:
                 continue
@@ -36,5 +36,5 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
-    print s.twoSum([0, 4, 3, 0], 0)
-    print s.twoSum([3, 2, 4], 6)
+    print(s.twoSum([0, 4, 3, 0], 0))
+    print(s.twoSum([3, 2, 4], 6))

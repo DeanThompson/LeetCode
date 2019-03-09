@@ -42,10 +42,10 @@ class MinStack:
 if __name__ == '__main__':
     st = MinStack()
     st.push(100)
-    print st
+    print(st)
     st.push(1)
-    print st
+    print(st)
     st.push(34)
-    print st
+    print(st)
 
-    print st.getMin()
+    print(st.getMin())

@@ -7,6 +7,7 @@ https://oj.leetcode.com/problems/lru-cache/
 inspired by the implementation from jinja2
 """
 
+
 # TODO: `list.remove` is too slow
 class LRUCache:
 
@@ -55,13 +56,12 @@ if __name__ == '__main__':
     l.set(5, 5)
     l.set(5, 5)
     l.get(4)
-    print l._queue
-    print l._cache
+    print(l._queue)
+    print(l._cache)
 
     l.set(6, 6)
-    print l.get(2)
-    print l.get(3)
-    print l.get(100)
-    print l._queue
-    print l._cache
-
+    print(l.get(2))
+    print(l.get(3))
+    print(l.get(100))
+    print(l._queue)
+    print(l._cache)

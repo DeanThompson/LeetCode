@@ -18,9 +18,9 @@ class Solution:
         pass
 
 
-
 if __name__ == '__main__':
     import time
+
 
     def timeit(func):
         def wrapper(*args, **kwargs):
@@ -32,14 +32,17 @@ if __name__ == '__main__':
                 i += 1
             duration = time.time() - start
             avg = duration / loop
-            print "duration:", duration, "loop:", loop, "avg:", avg
+            print("duration:", duration, "loop:", loop, "avg:", avg)
+
         return wrapper
 
 
     s = Solution()
-    
+
+
     @timeit
     def run():
         s.reverse(123462841425)
-    
+
+
     run()

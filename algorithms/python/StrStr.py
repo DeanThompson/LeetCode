@@ -12,9 +12,9 @@ class Solution:
     # @return a string or None
     def strStr(self, haystack, needle):
         length = len(needle)
-        for idx in xrange(len(haystack)-length+1):
+        for idx in range(len(haystack) - length + 1):
             # print haystack[idx:(idx+length)]
-            if haystack[idx:(idx+length)] == needle:
+            if haystack[idx:(idx + length)] == needle:
                 return haystack[idx:]
         return None
 
@@ -33,9 +33,9 @@ if __name__ == '__main__':
     s = Solution()
     haystack = "this is a test"
     needle = "test"
-    print s.strStr(haystack, needle)
-    print s.strStr2(haystack, needle)
+    print(s.strStr(haystack, needle))
+    print(s.strStr2(haystack, needle))
 
     needle = "is a"
-    print s.strStr(haystack, needle)
-    print s.strStr2(haystack, needle)
+    print(s.strStr(haystack, needle))
+    print(s.strStr2(haystack, needle))

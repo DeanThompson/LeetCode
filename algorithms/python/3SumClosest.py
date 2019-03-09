@@ -9,7 +9,7 @@ https://oj.leetcode.com/problems/3sum-closest/
 class Solution:
     # @return an integer
     def threeSumClosest(self, num, target):
-        min_diff = 1<<31
+        min_diff = 1 << 31
         result = 0
 
         num.sort()
@@ -20,7 +20,7 @@ class Solution:
             k = length - 1
             while j < k:
                 total = v + num[j] + num[k]
-                diff = abs(total-target)
+                diff = abs(total - target)
                 if diff < min_diff:
                     if diff == 0:
                         return total
@@ -30,11 +30,10 @@ class Solution:
                     j += 1
                 else:
                     k -= 1
-        
+
         return result
 
 
 if __name__ == '__main__':
     s = Solution()
-    print s.threeSumClosest([-1, 2, 1, -4], 1)
-
+    print(s.threeSumClosest([-1, 2, 1, -4], 1))

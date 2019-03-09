@@ -31,9 +31,9 @@ class Solution:
 
 def print_list(head):
     while head:
-        print head.val,
+        print(head.val, )
         head = head.next
-    print "\n"
+    print("\n")
 
 
 if __name__ == '__main__':
@@ -49,4 +49,3 @@ if __name__ == '__main__':
     s.deleteDuplicates(head)
 
     print_list(head)
-
